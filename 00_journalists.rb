@@ -34,37 +34,42 @@ arr1=
 "@Lucile_Quillet","@cgabizon","@Allocab","@epenser","@JAGventeprivee","@frwrds",
 "@Laure__Bourdon","@Xavier75","@maximeverner","@s_jourdain","@LoriHelloc"]
 
-
+#exo 1
 puts "combien y a t'_il de handle dans cette array?"
 puts "#{arr1.count}"
 
-
+#exo 2
 puts "Quel est le handle le plus court de cette liste?"
 puts "#{arr1.sort_by(&:length)[0]}"
 
+#exo 3
 puts "Combien y a t-il de handle contenant 5 caracteres (le @ ne compte pas)"
-puts "#{arr1.count(&:length)[5..7]}"
+puts "#{arr1.count(&:length)[5..6]}"
 
+#ceci est le n7
+puts "Quelle est la position dans l'array de la personne @epenser ?"
+puts "#{arr1.find_index("@epenser")}"
 
+#exo 4
 puts "Combien commencent par une majuscule (première lettre juste après le @) ?"
 puts "#{arr1.select {|e| e=~ /^@[A-Z]/ }.size}"
 
-
+#exo 5
 puts "Trie la liste de handle par ordre alphabétique."
 arr1.map!(&:upcase)
 arr1.each {|replace| replace.gsub!(/_/, "") }
 puts "#{arr1.sort{|a,b| a<=>b}}"
 
-
+#exo 6
 puts "Trie la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)"
 puts "#{arr1.sort_by(&:length)}"
 
-
+#exo 7 ( ne fonctionne plus à cet emplavement donc mis au dessus)
 puts "Quelle est la position dans l'array de la personne @epenser ?"
 puts "#{arr1.find_index("@epenser")}"
 
 
-
+#exo 8 (pas réussi)
 puts "Sors-moi une répartition des handle par taille de ces derniers 
 (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc"
  
